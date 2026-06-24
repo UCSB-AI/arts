@@ -1,0 +1,61 @@
+# RL v10: FashionMNIST — TREE-STRUCTURED RL with v6 binary reward
+#
+#   - node_budget = 5 (real tree depth via final_env_response fix)
+#   - batch_size = 4, rollouts_per_example = 4  →  16 episodes / GRPO group
+#     (each episode now runs 5 executor calls instead of 1, so we reduce
+#     batch_size from 8 to keep per-step wall time manageable)
+#   - reward_scheme = v6_binary (cleanest baseline: +1 if best>baseline)
+#   - Uses the new mlgym_tree_env_v3 package (MLGymTreeEnvV3) which parses
+#     PARENT from scientist output and builds a real branching tree.
+#   - max_steps = 30 (realistic for 12h at ~5x the per-step cost of linear)
+max_steps = 30
+seq_len = 8192
+
+[deployment]
+num_train_gpus = 1
+num_infer_gpus = 1
+
+[inference]
+[inference.model]
+max_model_len = 32768
+enforce_eager = true
+
+[wandb]
+project = "mlgym-scientist-rl"
+name = "fmnist_v10_tree_v6reward"
+
+[model]
+name = "Qwen/Qwen3-4B-Instruct-2507"
+
+[orchestrator]
+batch_size = 4
+rollouts_per_example = 4
+use_token_client = false
+
+[ckpt]
+interval = 5
+
+[orchestrator.client]
+base_url = ["http://localhost:8000/v1"]
+connect_timeout = 120.0
+
+[orchestrator.sampling]
+max_tokens = 1024
+
+[[orchestrator.env]]
+id = "mlgym_tree_env_v3"
+name = "mlgym_fmnist_tree"
+args = { task = "fashionMnist", node_budget = 5, executor_url = "https://api.anthropic.com/v1/", executor_model = "claude-sonnet-4-20250514", max_actions = 15, num_train_examples = 100, num_eval_examples = 10, reward_scheme = "v6_binary", reward_batch_size = 16 }
+
+[trainer.model.lora]
+rank = 32
+alpha = 64
+
+[trainer.model.ac]
+freq = 1
+
+[trainer.loss]
+kl_tau = 0.01
+
+[trainer.optim]
+lr = 5e-5

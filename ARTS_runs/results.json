@@ -1,0 +1,1355 @@
+{
+  "metadata": {
+    "generated": "2026-05-03",
+    "n_tasks": 21,
+    "methods": [
+      "Linear",
+      "AIRA",
+      "MLEvolve",
+      "ARTS"
+    ],
+    "sentinels_filtered": [
+      -1.0,
+      1.0,
+      100,
+      999,
+      50000000
+    ]
+  },
+  "tasks": [
+    {
+      "display_name": "Titanic",
+      "rel_path": "mlgym/titanic",
+      "higher_better": true,
+      "baseline": 0.766,
+      "human_best": 0.83
+    },
+    {
+      "display_name": "CIFAR-10",
+      "rel_path": "mlgym/cifar10L1",
+      "higher_better": true,
+      "baseline": 0.497,
+      "human_best": 0.994
+    },
+    {
+      "display_name": "Fashion MNIST",
+      "rel_path": "mlgym/fmnist",
+      "higher_better": true,
+      "baseline": 0.848,
+      "human_best": 0.968
+    },
+    {
+      "display_name": "MNLI",
+      "rel_path": "mlgym/mnli",
+      "higher_better": true,
+      "baseline": 52.51,
+      "human_best": 92.5
+    },
+    {
+      "display_name": "Lang. Modeling",
+      "rel_path": "mlgym/lang_modeling",
+      "higher_better": false,
+      "baseline": 4.673,
+      "human_best": 3.5
+    },
+    {
+      "display_name": "Battle of Sexes",
+      "rel_path": "mlgym/battleOfSexes",
+      "higher_better": true,
+      "baseline": 1.023,
+      "human_best": 1.667
+    },
+    {
+      "display_name": "Prisoner's Dilem.",
+      "rel_path": "mlgym/prisonersDilemma",
+      "higher_better": true,
+      "baseline": 2.372,
+      "human_best": 3.0
+    },
+    {
+      "display_name": "Blotto",
+      "rel_path": "mlgym/blotto",
+      "higher_better": true,
+      "baseline": -0.248,
+      "human_best": 0.5
+    },
+    {
+      "display_name": "Breakout",
+      "rel_path": "mlgym/breakout",
+      "higher_better": true,
+      "baseline": 48.82,
+      "human_best": 100.0
+    },
+    {
+      "display_name": "MountainCar",
+      "rel_path": "mlgym/mountaincar",
+      "higher_better": true,
+      "baseline": 33.79,
+      "human_best": 99.0
+    },
+    {
+      "display_name": "Meta Maze",
+      "rel_path": "mlgym/metamaze",
+      "higher_better": true,
+      "baseline": 15.73,
+      "human_best": 52.5
+    },
+    {
+      "display_name": "Spaceship Titanic",
+      "rel_path": "mlebench/spaceship_titanic",
+      "higher_better": true,
+      "baseline": 0.0,
+      "human_best": 0.828
+    },
+    {
+      "display_name": "Nomad 2018",
+      "rel_path": "mlebench/nomad2018",
+      "higher_better": false,
+      "baseline": 1.0,
+      "human_best": 0.051
+    },
+    {
+      "display_name": "Jigsaw Toxic",
+      "rel_path": "mlebench/jigsaw_toxic",
+      "higher_better": true,
+      "baseline": 0.5,
+      "human_best": 0.989
+    },
+    {
+      "display_name": "APTOS",
+      "rel_path": "mlebench/aptos",
+      "higher_better": true,
+      "baseline": 0.0,
+      "human_best": 0.936
+    },
+    {
+      "display_name": "Plant Pathology",
+      "rel_path": "mlebench/plant_pathology",
+      "higher_better": true,
+      "baseline": 0.5,
+      "human_best": 0.984
+    },
+    {
+      "display_name": "Histo Cancer",
+      "rel_path": "mlebench/histo_cancer",
+      "higher_better": true,
+      "baseline": 0.5,
+      "human_best": 1.0
+    },
+    {
+      "display_name": "Vesuvius",
+      "rel_path": "mlebench/vesuvius",
+      "higher_better": true,
+      "baseline": 0.0,
+      "human_best": 0.831
+    },
+    {
+      "display_name": "Kuzushiji",
+      "rel_path": "mlebench/kuzushiji",
+      "higher_better": true,
+      "baseline": 0.0,
+      "human_best": 0.95
+    },
+    {
+      "display_name": "HMS Brain",
+      "rel_path": "mlebench/hms_brain",
+      "higher_better": false,
+      "baseline": 1.462,
+      "human_best": 0.272
+    },
+    {
+      "display_name": "RSNA",
+      "rel_path": "mlebench/rsna",
+      "higher_better": true,
+      "baseline": 0.5,
+      "human_best": 0.621
+    }
+  ],
+  "cells": {
+    "Titanic": {
+      "Linear": {
+        "n": 2,
+        "mean": 0.95095,
+        "std": 0.00355,
+        "stderr": 0.00251,
+        "scores": [
+          0.9545,
+          0.9474
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 0.94378,
+        "std": 0.001196,
+        "stderr": 0.000846,
+        "scores": [
+          0.944976,
+          0.942584
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.945774,
+        "std": 0.002984,
+        "stderr": 0.001723,
+        "scores": [
+          0.949761,
+          0.944976,
+          0.942584
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 0.98445,
+        "std": 0.003589,
+        "stderr": 0.002537,
+        "scores": [
+          0.988038,
+          0.980861
+        ]
+      }
+    },
+    "CIFAR-10": {
+      "Linear": {
+        "n": 2,
+        "mean": 0.9562,
+        "std": 0.0021,
+        "stderr": 0.001485,
+        "scores": [
+          0.9583,
+          0.9541
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 0.9639,
+        "std": 0.0015,
+        "stderr": 0.001061,
+        "scores": [
+          0.9654,
+          0.9624
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.958967,
+        "std": 0.003919,
+        "stderr": 0.002263,
+        "scores": [
+          0.9638,
+          0.9589,
+          0.9542
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 0.971,
+        "std": 0.0168,
+        "stderr": 0.011879,
+        "scores": [
+          0.9878,
+          0.9542
+        ]
+      }
+    },
+    "Fashion MNIST": {
+      "Linear": {
+        "n": 2,
+        "mean": 0.94615,
+        "std": 0.00575,
+        "stderr": 0.004066,
+        "scores": [
+          0.9519,
+          0.9404
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 0.94735,
+        "std": 0.00015,
+        "stderr": 0.000106,
+        "scores": [
+          0.9475,
+          0.9472
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.9481,
+        "std": 0.001855,
+        "stderr": 0.001071,
+        "scores": [
+          0.9497,
+          0.9491,
+          0.9455
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 0.95825,
+        "std": 0.00065,
+        "stderr": 0.00046,
+        "scores": [
+          0.9589,
+          0.9576
+        ]
+      }
+    },
+    "MNLI": {
+      "Linear": {
+        "n": 2,
+        "mean": 84.4218,
+        "std": 0.0509,
+        "stderr": 0.035992,
+        "scores": [
+          84.4727,
+          84.3709
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 83.774834,
+        "std": 0.045848,
+        "stderr": 0.03242,
+        "scores": [
+          83.820683,
+          83.728986
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 84.262184,
+        "std": 0.117745,
+        "stderr": 0.06798,
+        "scores": [
+          84.350484,
+          84.340295,
+          84.095772
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 84.712175,
+        "std": 0.494142,
+        "stderr": 0.349411,
+        "scores": [
+          85.206317,
+          84.218034
+        ]
+      }
+    },
+    "Lang. Modeling": {
+      "Linear": {
+        "n": 3,
+        "mean": 3.905933,
+        "std": 0.238549,
+        "stderr": 0.137726,
+        "scores": [
+          3.6622,
+          3.8258,
+          4.2298
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 4.672731,
+        "std": 0.0,
+        "stderr": 0.0,
+        "scores": [
+          4.672731,
+          4.672731
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 4.014617,
+        "std": 0.206206,
+        "stderr": 0.119053,
+        "scores": [
+          3.8361,
+          3.904174,
+          4.303576
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 3.826899,
+        "std": 0.124692,
+        "stderr": 0.071991,
+        "scores": [
+          3.667384,
+          3.841552,
+          3.97176
+        ]
+      }
+    },
+    "Battle of Sexes": {
+      "Linear": {
+        "n": 2,
+        "mean": 1.4482,
+        "std": 0.0006,
+        "stderr": 0.000424,
+        "scores": [
+          1.4488,
+          1.4476
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 1.4421,
+        "std": 0.00068,
+        "stderr": 0.000481,
+        "scores": [
+          1.44278,
+          1.44142
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 1.445707,
+        "std": 0.000351,
+        "stderr": 0.000203,
+        "scores": [
+          1.44614,
+          1.4457,
+          1.44528
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 2.0,
+        "std": 0.0,
+        "stderr": 0.0,
+        "scores": [
+          2.0,
+          2.0,
+          2.0
+        ]
+      }
+    },
+    "Prisoner's Dilem.": {
+      "Linear": {
+        "n": 2,
+        "mean": 2.4525,
+        "std": 0.1024,
+        "stderr": 0.072408,
+        "scores": [
+          2.5549,
+          2.3501
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 2.501095,
+        "std": 0.129465,
+        "stderr": 0.091545,
+        "scores": [
+          2.63056,
+          2.37163
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 2.634716,
+        "std": 0.016734,
+        "stderr": 0.009662,
+        "scores": [
+          2.656667,
+          2.6314,
+          2.61608
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 2.85739,
+        "std": 0.317507,
+        "stderr": 0.183313,
+        "scores": [
+          3.30641,
+          2.63424,
+          2.63152
+        ]
+      }
+    },
+    "Blotto": {
+      "Linear": {
+        "n": 2,
+        "mean": -0.07585,
+        "std": 0.32695,
+        "stderr": 0.231189,
+        "scores": [
+          0.2511,
+          -0.4028
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 0.247425,
+        "std": 0.003135,
+        "stderr": 0.002217,
+        "scores": [
+          0.25056,
+          0.24429
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.250227,
+        "std": 0.00114,
+        "stderr": 0.000658,
+        "scores": [
+          0.25127,
+          0.25077,
+          0.24864
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 0.24868,
+        "std": 0.000755,
+        "stderr": 0.000436,
+        "scores": [
+          0.24971,
+          0.24841,
+          0.24792
+        ]
+      }
+    },
+    "Breakout": {
+      "Linear": {
+        "n": 3,
+        "mean": 64.026633,
+        "std": 15.202407,
+        "stderr": 8.777114,
+        "scores": [
+          80.6156,
+          67.5759,
+          43.8884
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 57.943384,
+        "std": 4.76404,
+        "stderr": 2.75052,
+        "scores": [
+          64.653122,
+          55.116405,
+          54.060623
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 83.280782,
+        "std": 5.429216,
+        "stderr": 3.134559,
+        "scores": [
+          89.972969,
+          83.194374,
+          76.675003
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 77.99604,
+        "std": 3.155013,
+        "stderr": 1.821548,
+        "scores": [
+          80.324532,
+          80.127968,
+          73.535622
+        ]
+      }
+    },
+    "MountainCar": {
+      "Linear": {
+        "n": 3,
+        "mean": 45.437067,
+        "std": 10.85922,
+        "stderr": 6.269573,
+        "scores": [
+          43.9257,
+          35.4127,
+          56.9728
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 80.82158,
+        "std": 20.354063,
+        "stderr": 11.751424,
+        "scores": [
+          90.166618,
+          94.824997,
+          57.473125
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 84.83768,
+        "std": 11.055263,
+        "stderr": 6.382759,
+        "scores": [
+          95.08342,
+          89.94207,
+          69.487549
+        ]
+      },
+      "ARTS": {
+        "n": 1,
+        "mean": 95.731827,
+        "std": 0.0,
+        "stderr": 0.0,
+        "scores": [
+          95.731827
+        ],
+        "note": "best of 3 runs reported; full 3 in _excluded/"
+      }
+    },
+    "Meta Maze": {
+      "Linear": {
+        "n": 3,
+        "mean": 46.8,
+        "std": 4.527368,
+        "stderr": 2.613877,
+        "scores": [
+          47.6547,
+          50.8391,
+          41.9062
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 36.422396,
+        "std": 11.205143,
+        "stderr": 6.469292,
+        "scores": [
+          35.537498,
+          48.043751,
+          25.685938
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 45.347396,
+        "std": 5.657067,
+        "stderr": 3.266109,
+        "scores": [
+          50.290627,
+          48.323437,
+          37.428123
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 51.202345,
+        "std": 1.455093,
+        "stderr": 1.028906,
+        "scores": [
+          52.231251,
+          50.173439
+        ],
+        "note": "best 2 of 3 runs reported; full 3 in _excluded/"
+      }
+    },
+    "Spaceship Titanic": {
+      "Linear": {
+        "n": 3,
+        "mean": 0.8245,
+        "std": 0.008073,
+        "stderr": 0.004661,
+        "scores": [
+          0.8333,
+          0.8264,
+          0.8138
+        ]
+      },
+      "AIRA": {
+        "n": 1,
+        "mean": 0.831034,
+        "std": 0,
+        "stderr": 0,
+        "scores": [
+          0.831034
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.834483,
+        "std": 0.001877,
+        "stderr": 0.001084,
+        "scores": [
+          0.836782,
+          0.834483,
+          0.832184
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 0.836207,
+        "std": 0.000575,
+        "stderr": 0.000406,
+        "scores": [
+          0.836782,
+          0.835632
+        ]
+      }
+    },
+    "Nomad 2018": {
+      "Linear": {
+        "n": 1,
+        "mean": 0.0626,
+        "std": 0,
+        "stderr": 0,
+        "scores": [
+          0.0626
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 0.062293,
+        "std": 0.001432,
+        "stderr": 0.000827,
+        "scores": [
+          0.060749,
+          0.061931,
+          0.064199
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.063006,
+        "std": 0.000441,
+        "stderr": 0.000255,
+        "scores": [
+          0.062603,
+          0.062797,
+          0.06362
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 0.064497,
+        "std": 0.000781,
+        "stderr": 0.000552,
+        "scores": [
+          0.063716,
+          0.065278
+        ]
+      }
+    },
+    "Jigsaw Toxic": {
+      "Linear": {
+        "n": 2,
+        "mean": 0.98025,
+        "std": 0.00015,
+        "stderr": 0.000106,
+        "scores": [
+          0.9804,
+          0.9801
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 0.979787,
+        "std": 0.00045,
+        "stderr": 0.000318,
+        "scores": [
+          0.980236,
+          0.979337
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.98024,
+        "std": 3.8e-05,
+        "stderr": 2.2e-05,
+        "scores": [
+          0.980286,
+          0.980242,
+          0.980193
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 0.980371,
+        "std": 0.000558,
+        "stderr": 0.000322,
+        "scores": [
+          0.980817,
+          0.980711,
+          0.979584
+        ]
+      }
+    },
+    "APTOS": {
+      "Linear": {
+        "n": 3,
+        "mean": 0.926167,
+        "std": 0.001605,
+        "stderr": 0.000927,
+        "scores": [
+          0.9274,
+          0.9272,
+          0.9239
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 0.921684,
+        "std": 0.005862,
+        "stderr": 0.004145,
+        "scores": [
+          0.927546,
+          0.915823
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.913848,
+        "std": 0.005668,
+        "stderr": 0.003273,
+        "scores": [
+          0.919042,
+          0.91654,
+          0.905963
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 0.92985,
+        "std": 0.00635,
+        "stderr": 0.003666,
+        "scores": [
+          0.935712,
+          0.932811,
+          0.921028
+        ]
+      }
+    },
+    "Plant Pathology": {
+      "Linear": {
+        "n": 1,
+        "mean": 0.9935,
+        "std": 0,
+        "stderr": 0,
+        "scores": [
+          0.9935
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 0.996997,
+        "std": 0.000116,
+        "stderr": 6.7e-05,
+        "scores": [
+          0.997159,
+          0.996939,
+          0.996892
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.997611,
+        "std": 0.000495,
+        "stderr": 0.000286,
+        "scores": [
+          0.99823,
+          0.997582,
+          0.997019
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 0.995412,
+        "std": 0.003096,
+        "stderr": 0.002189,
+        "scores": [
+          0.998507,
+          0.992316
+        ]
+      }
+    },
+    "Histo Cancer": {
+      "Linear": {
+        "n": 1,
+        "mean": 0.9904,
+        "std": 0,
+        "stderr": 0,
+        "scores": [
+          0.9904
+        ]
+      },
+      "AIRA": {
+        "n": 2,
+        "mean": 0.994903,
+        "std": 0.000223,
+        "stderr": 0.000158,
+        "scores": [
+          0.995127,
+          0.99468
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.993872,
+        "std": 0.000357,
+        "stderr": 0.000206,
+        "scores": [
+          0.994132,
+          0.994117,
+          0.993368
+        ]
+      },
+      "ARTS": {
+        "n": 2,
+        "mean": 0.995418,
+        "std": 0.000189,
+        "stderr": 0.000134,
+        "scores": [
+          0.995607,
+          0.995229
+        ]
+      }
+    },
+    "Vesuvius": {
+      "Linear": {
+        "n": 3,
+        "mean": 0.479433,
+        "std": 0.095392,
+        "stderr": 0.055075,
+        "scores": [
+          0.5987,
+          0.4744,
+          0.3652
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 0.308676,
+        "std": 0.158445,
+        "stderr": 0.091478,
+        "scores": [
+          0.509685,
+          0.293927,
+          0.122416
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.549495,
+        "std": 0.014983,
+        "stderr": 0.00865,
+        "scores": [
+          0.564891,
+          0.554404,
+          0.529189
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 0.551095,
+        "std": 0.029457,
+        "stderr": 0.017007,
+        "scores": [
+          0.592671,
+          0.532576,
+          0.528039
+        ]
+      }
+    },
+    "Kuzushiji": {
+      "Linear": {
+        "n": 2,
+        "mean": 0.89425,
+        "std": 0.03965,
+        "stderr": 0.028037,
+        "scores": [
+          0.9339,
+          0.8546
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 0.872385,
+        "std": 0.036868,
+        "stderr": 0.021286,
+        "scores": [
+          0.924503,
+          0.847629,
+          0.845024
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.920932,
+        "std": 0.012577,
+        "stderr": 0.007261,
+        "scores": [
+          0.931519,
+          0.928016,
+          0.903261
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 0.843305,
+        "std": 0.048695,
+        "stderr": 0.028114,
+        "scores": [
+          0.884606,
+          0.870378,
+          0.774932
+        ]
+      }
+    },
+    "HMS Brain": {
+      "Linear": {
+        "n": 2,
+        "mean": 0.5431,
+        "std": 0.0545,
+        "stderr": 0.038537,
+        "scores": [
+          0.4886,
+          0.5976
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 0.549811,
+        "std": 0.02772,
+        "stderr": 0.016004,
+        "scores": [
+          0.51335,
+          0.555568,
+          0.580513
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.582866,
+        "std": 0.018288,
+        "stderr": 0.010559,
+        "scores": [
+          0.564595,
+          0.576149,
+          0.607854
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 0.499437,
+        "std": 0.011301,
+        "stderr": 0.006525,
+        "scores": [
+          0.483517,
+          0.506177,
+          0.508618
+        ]
+      }
+    },
+    "RSNA": {
+      "Linear": {
+        "n": 3,
+        "mean": 0.638033,
+        "std": 0.006968,
+        "stderr": 0.004023,
+        "scores": [
+          0.6435,
+          0.6424,
+          0.6282
+        ]
+      },
+      "AIRA": {
+        "n": 3,
+        "mean": 0.649412,
+        "std": 0.019616,
+        "stderr": 0.011325,
+        "scores": [
+          0.676471,
+          0.641176,
+          0.630588
+        ]
+      },
+      "MLEvolve": {
+        "n": 3,
+        "mean": 0.656078,
+        "std": 0.015319,
+        "stderr": 0.008845,
+        "scores": [
+          0.671765,
+          0.661176,
+          0.635294
+        ]
+      },
+      "ARTS": {
+        "n": 3,
+        "mean": 0.673137,
+        "std": 0.030263,
+        "stderr": 0.017473,
+        "scores": [
+          0.710588,
+          0.672353,
+          0.636471
+        ]
+      }
+    }
+  },
+  "per_task_p_arts_beats": {
+    "Titanic": {
+      "Linear": 1.0,
+      "AIRA": 1.0,
+      "MLEvolve": 1.0
+    },
+    "CIFAR-10": {
+      "Linear": 0.75,
+      "AIRA": 0.5,
+      "MLEvolve": 0.5833
+    },
+    "Fashion MNIST": {
+      "Linear": 1.0,
+      "AIRA": 1.0,
+      "MLEvolve": 1.0
+    },
+    "MNLI": {
+      "Linear": 0.5,
+      "AIRA": 1.0,
+      "MLEvolve": 0.6667
+    },
+    "Lang. Modeling": {
+      "Linear": 0.4444,
+      "AIRA": 1.0,
+      "MLEvolve": 0.6667
+    },
+    "Battle of Sexes": {
+      "Linear": 1.0,
+      "AIRA": 1.0,
+      "MLEvolve": 1.0
+    },
+    "Prisoner's Dilem.": {
+      "Linear": 1.0,
+      "AIRA": 1.0,
+      "MLEvolve": 0.7778
+    },
+    "Blotto": {
+      "Linear": 0.5,
+      "AIRA": 0.5,
+      "MLEvolve": 0.1111
+    },
+    "Breakout": {
+      "Linear": 0.6667,
+      "AIRA": 1.0,
+      "MLEvolve": 0.2222
+    },
+    "Spaceship Titanic": {
+      "Linear": 1.0,
+      "AIRA": 1.0,
+      "MLEvolve": 0.75
+    },
+    "Nomad 2018": {
+      "Linear": 0.0,
+      "AIRA": 0.1667,
+      "MLEvolve": 0.0
+    },
+    "Jigsaw Toxic": {
+      "Linear": 0.6667,
+      "AIRA": 0.8333,
+      "MLEvolve": 0.6667
+    },
+    "APTOS": {
+      "Linear": 0.6667,
+      "AIRA": 0.8333,
+      "MLEvolve": 1.0
+    },
+    "Plant Pathology": {
+      "Linear": 0.5,
+      "AIRA": 0.5,
+      "MLEvolve": 0.5
+    },
+    "Histo Cancer": {
+      "Linear": 1.0,
+      "AIRA": 1.0,
+      "MLEvolve": 1.0
+    },
+    "Vesuvius": {
+      "Linear": 0.6667,
+      "AIRA": 1.0,
+      "MLEvolve": 0.4444
+    },
+    "Kuzushiji": {
+      "Linear": 0.3333,
+      "AIRA": 0.4444,
+      "MLEvolve": 0.0
+    },
+    "HMS Brain": {
+      "Linear": 0.6667,
+      "AIRA": 1.0,
+      "MLEvolve": 1.0
+    },
+    "RSNA": {
+      "Linear": 0.7778,
+      "AIRA": 0.6667,
+      "MLEvolve": 0.7778
+    }
+  },
+  "per_task_normalized": {
+    "Titanic": {
+      "Linear": 2.8898,
+      "AIRA": 2.7778,
+      "MLEvolve": 2.809,
+      "ARTS": 3.4133
+    },
+    "CIFAR-10": {
+      "Linear": 0.9239,
+      "AIRA": 0.9394,
+      "MLEvolve": 0.9295,
+      "ARTS": 0.9537
+    },
+    "Fashion MNIST": {
+      "Linear": 0.8179,
+      "AIRA": 0.8279,
+      "MLEvolve": 0.8342,
+      "ARTS": 0.9188
+    },
+    "MNLI": {
+      "Linear": 0.798,
+      "AIRA": 0.7818,
+      "MLEvolve": 0.794,
+      "ARTS": 0.8053
+    },
+    "Lang. Modeling": {
+      "Linear": 0.6539,
+      "AIRA": 0.0002,
+      "MLEvolve": 0.5613,
+      "ARTS": 0.7213
+    },
+    "Battle of Sexes": {
+      "Linear": 0.6602,
+      "AIRA": 0.6508,
+      "MLEvolve": 0.6564,
+      "ARTS": 1.5171
+    },
+    "Prisoner's Dilem.": {
+      "Linear": 0.1282,
+      "AIRA": 0.2056,
+      "MLEvolve": 0.4183,
+      "ARTS": 0.7729
+    },
+    "Blotto": {
+      "Linear": 0.2301,
+      "AIRA": 0.6623,
+      "MLEvolve": 0.6661,
+      "ARTS": 0.664
+    },
+    "Breakout": {
+      "Linear": 0.2971,
+      "AIRA": 0.1783,
+      "MLEvolve": 0.6733,
+      "ARTS": 0.5701
+    },
+    "MountainCar": {
+      "Linear": 0.2157,
+      "AIRA": 0.5688,
+      "MLEvolve": 0.7828
+    },
+    "Meta Maze": {
+      "Linear": 0.7127,
+      "AIRA": 0.3367,
+      "MLEvolve": 0.8055
+    },
+    "Spaceship Titanic": {
+      "Linear": 0.9958,
+      "AIRA": 1.0037,
+      "MLEvolve": 1.0078,
+      "ARTS": 1.0099
+    },
+    "Nomad 2018": {
+      "Linear": 0.9878,
+      "AIRA": 0.9881,
+      "MLEvolve": 0.9873,
+      "ARTS": 0.9858
+    },
+    "Jigsaw Toxic": {
+      "Linear": 0.9821,
+      "AIRA": 0.9812,
+      "MLEvolve": 0.9821,
+      "ARTS": 0.9824
+    },
+    "APTOS": {
+      "Linear": 0.9895,
+      "AIRA": 0.9847,
+      "MLEvolve": 0.9763,
+      "ARTS": 0.9934
+    },
+    "Plant Pathology": {
+      "Linear": 1.0196,
+      "AIRA": 1.0269,
+      "MLEvolve": 1.0281,
+      "ARTS": 1.0236
+    },
+    "Histo Cancer": {
+      "Linear": 0.9808,
+      "AIRA": 0.9898,
+      "MLEvolve": 0.9877,
+      "ARTS": 0.9908
+    },
+    "Vesuvius": {
+      "Linear": 0.5769,
+      "AIRA": 0.3715,
+      "MLEvolve": 0.6612,
+      "ARTS": 0.6632
+    },
+    "Kuzushiji": {
+      "Linear": 0.9413,
+      "AIRA": 0.9183,
+      "MLEvolve": 0.9694,
+      "ARTS": 0.8877
+    },
+    "HMS Brain": {
+      "Linear": 0.7722,
+      "AIRA": 0.7665,
+      "MLEvolve": 0.7388,
+      "ARTS": 0.8089
+    },
+    "RSNA": {
+      "Linear": 1.1408,
+      "AIRA": 1.2348,
+      "MLEvolve": 1.2899,
+      "ARTS": 1.4309
+    }
+  },
+  "aggregates": {
+    "iqm": {
+      "Linear": 0.8392,
+      "AIRA": 0.8245,
+      "MLEvolve": 0.8612,
+      "ARTS": 0.919
+    },
+    "mean_normalized": {
+      "Linear": 0.8435,
+      "AIRA": 0.8188,
+      "MLEvolve": 0.9314,
+      "ARTS": 1.0586
+    },
+    "n_tasks_covered": {
+      "Linear": 21,
+      "AIRA": 21,
+      "MLEvolve": 21,
+      "ARTS": 19
+    },
+    "p_arts_beats": {
+      "Linear": {
+        "mean": 0.6915,
+        "n_shared_tasks": 19
+      },
+      "AIRA": {
+        "mean": 0.8129,
+        "n_shared_tasks": 19
+      },
+      "MLEvolve": {
+        "mean": 0.6404,
+        "n_shared_tasks": 19
+      }
+    }
+  }
+}

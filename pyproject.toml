@@ -1,0 +1,39 @@
+[project]
+name = "arts"
+version = "0.1.0"
+description = "ARTS: Agentic Reasoning for Tree Search — automated discovery via reasoning-guided search and test-time training"
+authors = [{ name = "Gurusha Juneja", email = "gurushajuneja@gmail.com" }]
+readme = "README.md"
+keywords = ['python']
+requires-python = "~=3.12.0"
+classifiers = [
+    "Intended Audience :: Developers",
+    "Programming Language :: Python",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3.12",
+    "Topic :: Software Development :: Libraries :: Python Modules",
+]
+dependencies = [
+    "flash-attn>=2.8.3",
+    "mlgym",
+    "openai>=2.15.0",
+    "prime-rl",
+    "python-dotenv>=1.2.1",
+]
+
+[project.urls]
+Homepage = "https://automating-discovery.github.io/arts/"
+Repository = "https://github.com/UCSB-AI/arts"
+Documentation = "https://automating-discovery.github.io/arts/"
+
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build.targets.wheel]
+packages = ["arts"]
+include = ["mlgym_tree_env_v3.py"]
+
+[tool.uv.sources]
+mlgym = { path = "../MLGym", editable = true }
+prime-rl = { path = "../prime-rl", editable = true }

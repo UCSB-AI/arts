@@ -1,0 +1,53 @@
+# RL v6.2: FashionMNIST — TREE-STRUCTURED RL with v6 binary reward
+#   Fixed prompt with few-shot examples so Qwen actually follows format.
+max_steps = 30
+seq_len = 8192
+
+[deployment]
+num_train_gpus = 1
+num_infer_gpus = 1
+
+[inference]
+[inference.model]
+max_model_len = 32768
+enforce_eager = true
+
+[wandb]
+project = "mlgym-scientist-rl"
+name = "fmnist_v6.2_tree"
+
+[model]
+name = "Qwen/Qwen3-4B-Instruct-2507"
+
+[orchestrator]
+batch_size = 4
+rollouts_per_example = 4
+use_token_client = false
+
+[ckpt]
+interval = 5
+
+[orchestrator.client]
+base_url = ["http://localhost:8000/v1"]
+connect_timeout = 120.0
+
+[orchestrator.sampling]
+max_tokens = 1024
+
+[[orchestrator.env]]
+id = "mlgym_tree_env_v3"
+name = "mlgym_fmnist_tree"
+args = { task = "fashionMnist", node_budget = 5, executor_url = "https://api.anthropic.com/v1/", executor_model = "claude-sonnet-4-20250514", max_actions = 15, num_train_examples = 100, num_eval_examples = 10, reward_scheme = "v6_binary", reward_batch_size = 16 }
+
+[trainer.model.lora]
+rank = 32
+alpha = 64
+
+[trainer.model.ac]
+freq = 1
+
+[trainer.loss]
+kl_tau = 0.01
+
+[trainer.optim]
+lr = 5e-5
